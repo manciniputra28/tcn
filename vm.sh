@@ -82,25 +82,25 @@ else
     echo -ne '####                (20%)\r'
     curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty
     echo -ne '#####               (25%)\r'
-    chmod +x unzip >/dev/null 2>err.log
+    chmod +x unzip
     export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$PATH"
-    ./unzip ngrok.zip >/dev/null 2>err.log
+    ./unzip ngrok.zip
     echo -ne '######               (30%)\r'
-    ./unzip files.zip >/dev/null 2>err.log
+    ./unzip files.zip
     echo -ne '#######              (35%)\r'
-    ./unzip root.zip >/dev/null 2>err.log
-    tar -xf root.tar.gz >/dev/null 2>err.log
+    ./unzip root.zip
+    tar -xf root.tar.gz
     echo -ne '########             (40%)\r'
     chmod +x ./libraries/proot >/dev/null 2>err.log
     echo -ne '#########            (45%)\r'
-    chmod +x ngrok >/dev/null 2>err.log
+    chmod +x ngrok
     echo -ne '##########           (50%)\r'
-    chmod +x gotty >/dev/null 2>err.log
+    chmod +x gotty
     echo -ne '###########          (55%)\r'
-    rm -rf files.zip >/dev/null 2>err.log
-    rm -rf root.zip >/dev/null 2>err.log
-    rm -rf root.tar.gz >/dev/null 2>err.log
-    rm -rf ngrok.zip >/dev/null 2>err.log
+    rm -rf files.zip
+    rm -rf root.zip
+    rm -rf root.tar.gz
+    rm -rf ngrok.zip
     echo -ne '############         (60%)\r'
 
     cmds=("mv gotty /usr/bin/" "mv unzip /usr/bin/" "mv ngrok /usr/bin/" "apt-get update" "apt-get -y upgrade" "apt-get -y install sudo curl wget hwloc htop nano neofetch python3-pip nodejs speedtest-cli" "curl -o /bin/systemctl https://raw.githubusercontent.com/gdraheim/docker-systemctl-replacement/master/files/docker/systemctl3.py")
