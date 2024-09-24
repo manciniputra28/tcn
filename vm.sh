@@ -19,9 +19,7 @@ lightblue=$(echo -en "\e[94m")
 lightgreen=$(echo -en "\e[92m")
 
 echo "
-${bold}${lightgreen}========================================================================
-${bold}${lightgreen}
-${bold}${lightgreen}
+${bold}${lightblue}
 ${bold}${lightblue} _________  ________  ________      
 ${bold}${lightblue}|\___   ___\\   ____\|\   ___  \    
 ${bold}${lightblue}\|___ \  \_\ \  \___|\ \  \\ \  \   
@@ -29,9 +27,7 @@ ${bold}${lightblue}     \ \  \ \ \  \    \ \  \\ \  \
 ${bold}${lightblue}      \ \  \ \ \  \____\ \  \\ \  \ 
 ${bold}${lightblue}       \ \__\ \ \_______\ \__\\ \__\
 ${bold}${lightblue}        \|__|  \|_______|\|__| \|__|
-${bold}${lightgreen}
-${bold}${lightgreen}
-${bold}${lightgreen}========================================================================
+${bold}${lightblue}
 "
 
 echo "${nc}"
@@ -119,9 +115,7 @@ else
     touch install.lock
 
     echo "
-${bold}${lightgreen}========================================================================
-${bold}${lightgreen}
-${bold}${lightgreen}
+${bold}${lightblue}
 ${bold}${lightblue} _________  ________  ________      
 ${bold}${lightblue}|\___   ___\\   ____\|\   ___  \    
 ${bold}${lightblue}\|___ \  \_\ \  \___|\ \  \\ \  \   
@@ -129,9 +123,7 @@ ${bold}${lightblue}     \ \  \ \ \  \    \ \  \\ \  \
 ${bold}${lightblue}      \ \  \ \ \  \____\ \  \\ \  \ 
 ${bold}${lightblue}       \ \__\ \ \_______\ \__\\ \__\
 ${bold}${lightblue}        \|__|  \|_______|\|__| \|__|
-${bold}${lightgreen}
-${bold}${lightgreen}
-${bold}${lightgreen}========================================================================
+${bold}${lightblue}
 "
     runcmd
 fi
