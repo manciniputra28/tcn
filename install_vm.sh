@@ -20,7 +20,8 @@ lightgreen=$(echo -en "\e[92m")
 
 echo "
 ${bold}${lightgreen}========================================================================
-                                                                                                  
+${bold}${lightgreen}
+${bold}${lightgreen}
 ${bold}${lightblue} _________  ________  ________      
 ${bold}${lightblue}|\___   ___\\   ____\|\   ___  \    
 ${bold}${lightblue}\|___ \  \_\ \  \___|\ \  \\ \  \   
@@ -28,7 +29,8 @@ ${bold}${lightblue}     \ \  \ \ \  \    \ \  \\ \  \
 ${bold}${lightblue}      \ \  \ \ \  \____\ \  \\ \  \ 
 ${bold}${lightblue}       \ \__\ \ \_______\ \__\\ \__\
 ${bold}${lightblue}        \|__|  \|_______|\|__| \|__|
-
+${bold}${lightgreen}
+${bold}${lightgreen}
 ${bold}${lightgreen}========================================================================
 "
 
@@ -62,13 +64,13 @@ echo ""
 if [[ -f "./install.lock" ]]; then
     echo "${bold}${lightgreen}==> Installation already done. Skipping to start proot environment.${nc}"
     function runcmd1 {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}root${nc}@${lightblue}debian${nc}:~ "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd
     }
     function runcmd {
-        printf "${bold}${lightgreen}Default${nc}@${lightblue}Container${nc}:~ "
+        printf "${bold}${lightgreen}root${nc}@${lightblue}debian${nc}:~ "
         read -r cmdtorun
         ./libraries/proot -S . /bin/bash -c "$cmdtorun"
         runcmd1
@@ -76,13 +78,13 @@ if [[ -f "./install.lock" ]]; then
     runcmd
 else
     echo "Downloading and installing required files..."
-    curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip >/dev/null 2>err.log
+    curl -sSLo ngrok.zip https://bin.equinox.io/c/4VmDzA7iaHb/ngrok-stable-linux-amd64.zip
     echo -ne '#                   (5%)\r'
-    curl -sSLo files.zip https://github.com/RealTriassic/Ptero-VM-JAR/releases/download/latest/files.zip >/dev/null 2>err.log
+    curl -sSLo files.zip https://github.com/RealTriassic/Ptero-VM-JAR/releases/download/latest/files.zip
     echo -ne '##                  (10%)\r'
-    curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/unzip >/dev/null 2>err.log
+    curl -sSLo unzip https://raw.githubusercontent.com/afnan007a/Ptero-vm/main/unzip
     echo -ne '####                (20%)\r'
-    curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty >/dev/null 2>err.log
+    curl -sSLo gotty https://raw.githubusercontent.com/afnan007a/Replit-Vm/main/gotty
     echo -ne '#####               (25%)\r'
     chmod +x unzip >/dev/null 2>err.log
     export PATH="/bin:/usr/bin:/usr/local/bin:/sbin:$HOMEA/bin:$HOMEA/usr/bin:$HOMEA/sbin:$HOMEA/usr/sbin:$HOMEA/etc/init.d:$PATH"
@@ -118,7 +120,8 @@ else
 
     echo "
 ${bold}${lightgreen}========================================================================
-                                                                                                  
+${bold}${lightgreen}
+${bold}${lightgreen}
 ${bold}${lightblue} _________  ________  ________      
 ${bold}${lightblue}|\___   ___\\   ____\|\   ___  \    
 ${bold}${lightblue}\|___ \  \_\ \  \___|\ \  \\ \  \   
@@ -126,7 +129,8 @@ ${bold}${lightblue}     \ \  \ \ \  \    \ \  \\ \  \
 ${bold}${lightblue}      \ \  \ \ \  \____\ \  \\ \  \ 
 ${bold}${lightblue}       \ \__\ \ \_______\ \__\\ \__\
 ${bold}${lightblue}        \|__|  \|_______|\|__| \|__|
-
+${bold}${lightgreen}
+${bold}${lightgreen}
 ${bold}${lightgreen}========================================================================
 "
     runcmd
